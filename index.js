@@ -1,3 +1,5 @@
+
+
 const board = document.querySelector(".board")
 
 for (let i = 0; i < 3000; i++) {
@@ -8,7 +10,7 @@ for (let i = 0; i < 3000; i++) {
         newDiv.id = "sky"
     }
 
-    if (i >= 630 && i < 671) {
+    if (i >= 618 && i < 661) {
         if (i % 1 === 0) {
             newDiv.id = "grass2"
         }
@@ -22,7 +24,7 @@ for (let i = 0; i < 3000; i++) {
             newDiv.id = "grass5"
         }
     }
-    if (i >= 671 && i < 743) {
+    if (i >= 661 && i < 743) {
         if (i % 1 === 0) {
             newDiv.id = "soil1"
         }
@@ -40,16 +42,34 @@ for (let i = 0; i < 3000; i++) {
         }
     }
 
-    if (i >= 743 && i < 980) {
+    if (i >= 743 && i < 989) {
         newDiv.id = "stone"
     }
-
-
-
     board.append(newDiv)
-
 }
 
 const footer = document.querySelector("footer")
-
+for (let i = 0; i <= 5; i++) {
+    if (i === 1) {
+        const button = document.createElement("img")
+        button.id = "axe"
+    }
+    if (i === 2) {
+        const button = document.createElement("img")
+        button.id = "shufle"
+    }
+    if (i === 3) {
+        const button = document.createElement("img")
+        button.id = "pick"
+    }
+    if (i === 4) {
+        const button = document.createElement("img")
+        button.id = "sword"
+    }
+    if (i === 5) {
+        const button = document.createElement("img")
+        button.id = "reset"
+    }
+    footer.append(button)
+}
 
