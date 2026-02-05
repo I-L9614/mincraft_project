@@ -21,7 +21,16 @@ body {
     background-color: rgb(156, 233, 233);
 }
 
+.monster-face {
+    background: url(./images/creeperFace.png);
+    background-size: contain;
 
+}
+
+.monster-body {
+    background: url(./images/creeperBody.png);
+    background-size: contain;
+}
 
 .grass2 {
     background: url(./images/grass2.png);

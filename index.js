@@ -1,8 +1,10 @@
+import { largTreee, secondTree } from "./utils/trees.js"
+import { highMonster, smallMonster } from "./utils/monsters.js"
 const board = document.querySelector(".board")
 
 const firstTreeStart = 579
 
-const secondTree = 586
+const secondTreeStart = 586
 function createBoard() {
     for (let i = 0; i < 3000; i++) {
         const newDiv = document.createElement('div')
@@ -67,57 +69,11 @@ function click() {
 
 }
 
-function putTreee(start, is2, high, is2leaves) {
-    for (let i = 0; i < high; i++) {
-        if (is2 === true) {
-            const startTree = document.getElementById(start)
-            const endTree = document.getElementById(start + 1)
-            startTree.classList = "treeRace"
-            endTree.classList = "treeRace"
-            start = start - 41
-        } else {
-            const tree = document.getElementById(start)
-            tree.classList = "treeRace"
-            start = start - 41
-        }
-    }
-    if (is2leaves === true) {
-        for (let k = 0; k < 2; k++) {
-            for (let j = 0; j < 6; j++) {
-                const down = 38
-                const leave = document.getElementById(start - (down + j) + 41)
-                leave.classList = "leaves"
-            }
-            start = start - 41
-        }
-        for (let j = 0; j < 4; j++) {
-            const down = 39
-            const leave = document.getElementById(start - (down + j) + 41)
-            leave.classList = "leaves"
-        }
-        start = start - 41
-        for (let j = 0; j < 2; j++) {
-            const down = 40
-            const leave = document.getElementById(start - (down + j) + 41)
-            leave.classList = "leaves"
-        }
-    } else {
-        for (let j = 0; j < 3; j++) {
-                const down = 40
-                const leave = document.getElementById(start - (down + j) + 41)
-                leave.classList = "leaves"
-            }
-            start = start - 41
-        }
-        
-        const leave = document.getElementById(start)
-        leave.classList = "leaves"
-        
-
-}
-
 createBoard()
-putTreee(firstTreeStart, true, 4, true)
-
-putTreee(secondTree, false, 3, false)
-
+largTreee(firstTreeStart, true, 4)
+secondTree(secondTreeStart, 3)
+largTreee(550, false, 4)
+largTreee(557, false, 4)
+highMonster(564,5)
+highMonster(566,5)
+smallMonster(569, 2)
